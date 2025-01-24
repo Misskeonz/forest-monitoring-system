@@ -1,0 +1,10 @@
+obj = parameter[1]["data"]
+arrlgt = parameter[1]["count"]["total"] - 1
+temp = obj[arrlgt]["Temperature"]
+threshold = 35
+
+if int(temp) > threshold or temp == 'None':
+    msgbody='<p>Current temperature value '+temp+' is over threshold. Please open the window to provide a better ventilation.</p><br>'
+    output[1]="[Warning] Temperature Reading over Threshold "
+    output[2]=msgbody
+    output[3]=2
